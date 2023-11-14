@@ -61,6 +61,7 @@
                   app:backgroundTint="@null"
                   android:background="@drawable/boton_3"
                   android:textSize="40sp"
+                  android:onClick="onLimpiarUno"
                   android:textColor="@color/black"/>
 
           </LinearLayout>
@@ -97,6 +98,7 @@
                   app:backgroundTint="@null"
                   android:background="@drawable/boton_principal"
                   android:textColor="@color/black"
+                  android:onClick="onLimpiarClick"
                   style="?android:attr/buttonBarButtonStyle" />
 
               <Button
@@ -133,6 +135,7 @@
                   android:textSize="50sp"
                   android:text="@string/division"
                   android:textColor="@color/black"
+                  android:onClick="onNumeroClick"
                   style="?android:attr/buttonBarButtonStyle" />
 
           </LinearLayout>
@@ -156,6 +159,7 @@
                   android:textSize="50sp"
                   android:text="@string/_7"
                   android:textColor="@color/black"
+                  android:onClick="onNumeroClick"
                   style="?android:attr/buttonBarButtonStyle" />
 
               <Button
@@ -169,6 +173,7 @@
                   android:textSize="50sp"
                   android:text="@string/_8"
                   android:textColor="@color/black"
+                  android:onClick="onNumeroClick"
                   style="?android:attr/buttonBarButtonStyle" />
               <Button
                   android:id="@+id/btn_9"
@@ -181,6 +186,7 @@
                   android:textSize="50sp"
                   android:text="@string/_9"
                   android:textColor="@color/black"
+                  android:onClick="onNumeroClick"
                   style="?android:attr/buttonBarButtonStyle" />
               <Button
                   android:id="@+id/btn_multiplicar"
@@ -192,6 +198,7 @@
                   android:textSize="50sp"
                   android:text="@string/multiplicar"
                   android:textColor="@color/black"
+                  android:onClick="onNumeroClick"
                   style="?android:attr/buttonBarButtonStyle" />
 
           </LinearLayout>
@@ -215,6 +222,7 @@
                   android:layout_marginEnd="2dp"
                   android:textSize="50sp"
                   android:text="@string/_4"
+                  android:onClick="onNumeroClick"
                   android:textColor="@color/black"
                   style="?android:attr/buttonBarButtonStyle" />
 
@@ -228,6 +236,7 @@
                   android:background="@drawable/boton_2"
                   android:layout_marginEnd="2dp"
                   android:text="@string/_5"
+                  android:onClick="onNumeroClick"
                   android:textColor="@color/black"
                   style="?android:attr/buttonBarButtonStyle" />
               <Button
@@ -241,6 +250,7 @@
                   android:textSize="50sp"
                   android:text="@string/_6"
                   android:textColor="@color/black"
+                  android:onClick="onNumeroClick"
                   style="?android:attr/buttonBarButtonStyle" />
               <Button
                   android:id="@+id/btn_menos"
@@ -252,6 +262,7 @@
                   android:background="@drawable/boton_principal"
                   android:text="@string/menos"
                   android:textColor="@color/black"
+                  android:onClick="onNumeroClick"
                   style="?android:attr/buttonBarButtonStyle" />
 
           </LinearLayout>
@@ -275,6 +286,7 @@
                   android:layout_marginEnd="2dp"
                   android:text="@string/_3"
                   android:textColor="@color/black"
+                  android:onClick="onNumeroClick"
                   style="?android:attr/buttonBarButtonStyle" />
 
               <Button
@@ -288,6 +300,7 @@
                   android:textSize="50sp"
                   android:text="@string/_2"
                   android:textColor="@color/black"
+                  android:onClick="onNumeroClick"
                   style="?android:attr/buttonBarButtonStyle" />
               <Button
                   android:id="@+id/btn_1"
@@ -300,6 +313,7 @@
                   android:layout_marginEnd="2dp"
                   android:text="@string/_1"
                   android:textColor="@color/black"
+                  android:onClick="onNumeroClick"
                   style="?android:attr/buttonBarButtonStyle" />
               <Button
                   android:id="@+id/btn_suma"
@@ -311,6 +325,7 @@
                   android:background="@drawable/boton_principal"
                   android:text="@string/suma"
                   android:textColor="@color/black"
+                  android:onClick="onNumeroClick"
                   style="?android:attr/buttonBarButtonStyle" />
 
           </LinearLayout>
@@ -334,10 +349,11 @@
                   android:layout_marginEnd="2dp"
                   android:text="@string/_0"
                   android:textColor="@color/black"
+                  android:onClick="onNumeroClick"
                   style="?android:attr/buttonBarButtonStyle" />
 
               <Button
-                  android:id="@+id/btn_coma"
+                  android:id="@+id/btn_punto"
                   android:layout_weight="1"
                   android:layout_width="0dp"
                   android:layout_height="match_parent"
@@ -345,8 +361,9 @@
                   app:backgroundTint="@null"
                   android:background="@drawable/boton_2"
                   android:layout_marginEnd="2dp"
-                  android:text="@string/coma"
+                  android:text="@string/punto"
                   android:textColor="@color/black"
+                  android:onClick="onNumeroClick"
                   style="?android:attr/buttonBarButtonStyle" />
               <Button
                   android:id="@+id/btn_igual"
@@ -358,6 +375,7 @@
                   android:background="@drawable/boton_principal"
                   android:text="@string/igual"
                   android:textColor="@color/black"
+                  android:onClick="onIgualClick"
                   style="?android:attr/buttonBarButtonStyle" />
 
           </LinearLayout>
