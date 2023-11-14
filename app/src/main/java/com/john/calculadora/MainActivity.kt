@@ -1,5 +1,6 @@
 package com.john.calculadora
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     private var numero2: Double = 0.0
     private var operacion: String = ""
     private var textoActual: String = ""
-    private var datos : Int = 0
+    private lateinit var boton : Button
 
     private lateinit var pantalla: TextView
 
@@ -20,30 +21,30 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         pantalla = findViewById(R.id.txt_pantalla)
+
     }
 
     fun onNumeroClick(view: View) {
-        val boton = view as Button
+        boton = view as Button
         if (!(boton.text.matches(Regex("=")))){
             textoActual += boton.text
             actualizarPantalla()
         }
-
-        //tomarDatos()
-
-    }
-    fun tomarDatos(){
-        val datos = textoActual
-        val token : Array<String> = datos.toString().split("").toTypedArray()
-        numero1 = token.size.toDouble()
-        pantalla.text = numero1.toString()
-
-
     }
 
-
-
-
+    private fun tomarDatos(){
+        var datos = textoActual
+        var token : Array<String> = datos.toString().split("[+\\-*/]".toRegex()).toTypedArray()
+        numero1 = token[0].toDouble()
+        numero2 = token[1].toDouble()
+        val coincidencia = "[+\\-/*]".toRegex()
+        textoActual.forEach {
+            if (it.toString().matches(coincidencia)){
+                operacion = it.toString()
+            }
+        }
+    }
+    @SuppressLint("SetTextI18n")
     fun onIgualClick(view: View) {
         tomarDatos()
         // Realizar la operación y mostrar el resultado en la pantalla
@@ -60,8 +61,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
     fun onLimpiarClick(view: View) {
+        limpiarPantalla()
+    }
+    private fun limpiarPantalla() {
         // Limpiar la pantalla y reiniciar las variables
         pantalla.text = ""
         textoActual = ""
